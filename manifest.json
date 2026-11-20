@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Spotify Web Stream Overlay",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://spotify.com*"],
+      "js": ["reader.js"]
+    },
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["https://spotify.com*"],
+      "js": ["display.js"]
+    }
+  ]
+}
